@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            firstname : "allu",
+            lastname : "arjun"
+        }
+        var obj1 ={
+                firstname: "bg",
+                lastname: "gk",
+                greetings : function(a,b){
+                     console.log("hello " + this.firstname+" "+this.lastname + " and " + a+" " + b);
+
+                }
+            }
+        obj1.greetings.call(obj ,"hi" , "hello");
+        obj1.greetings.apply(obj1 ,["hi" ,"hello"]);
+    </script>
+    
+</body>
+</html>
